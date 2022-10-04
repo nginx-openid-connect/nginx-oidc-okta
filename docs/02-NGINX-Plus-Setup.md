@@ -1,32 +1,24 @@
-# How To Set Up NGINX Plus OIDC for Amazon Cognito Integration
+# How To Set Up NGINX Plus OIDC for Okta Integration
 
 Take the following steps to set up NGINX Plus as the OpenID Connect relying party that runs.
 
 ## Configure NGINX OpenID Connect
 
-1. Clone the [nginx-openid-connect/nginx-oidc-amazon-cognito](git@github.com:nginx-openid-connect/nginx-oidc-v1-amazon-cognito.git) GitHub repository, or download the repo files.
+1. Clone the [nginx-openid-connect/nginx-oidc-okta](https://github.com/nginx-openid-connect/nginx-oidc-okta) GitHub repository, or download the repo files.
 
    ```bash
-   git clone https://github.com/nginx-openid-connect/nginx-oidc-amazon-cognito.git
+   git clone https://github.com/nginx-openid-connect/nginx-oidc-okta.git
    ```
 
-2. In the `oidc_idp.conf`, find the following directives(`$idp_domain`, `$idp_region`, `$idp_user_pool_id`, `$oidc_client`), and update them.
+2. In the `oidc_idp.conf`, find the following directives(`$idp_domain`, `$oidc_client`), and update them.
 
    You could find the IDP domain in the **Basic Information** section.  
    ![](./img/basic-domain.png)
 
    ```nginx
     map $x_client_id $idp_domain {
-        # e.g., my-nginx-plus-oidc.auth.us-east-2.amazoncognito.com
+        # e.g., dev-xxxxxx.okta.com
         default "{{Edit-IdP-Domain}}";
-    }
-
-    map $x_client_id $idp_region {
-        default "{{Edit-IdP-Region}}" # e.g., us-east-2
-    }
-
-    map $x_client_id $idp_user_pool_id {
-        default "{{Edit-User-Pool-ID}}" # e.g., us-east-xxxxxxxxxxx
     }
 
     map $x_client_id $oidc_client {
