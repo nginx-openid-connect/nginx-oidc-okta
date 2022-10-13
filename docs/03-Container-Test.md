@@ -63,16 +63,17 @@ Take the following steps to run NGINX Plus in a Docker container and test OIDC f
 
   - An endpoint of sample API is defined in `oidc_frontend_backend.conf`. You can add any API endpoint when you want to use an access token by referencing the following example:
 
-  ```nginx
-      location /v1/api/example {
-          auth_jwt "" token=$id_token;
-          auth_jwt_key_request /_jwks_uri;        # Enable when using URL
+    ```nginx
+        location /v1/api/example {
+            auth_jwt "" token=$access_token;
+            auth_jwt_key_request /_jwks_uri; # Enable when using URL
+            proxy_set_header Authorization "Bearer $access_token";
+            proxy_pass http://my_backend_app;
+            access_log /var/log/nginx/access.log oidc_jwt;
+        }
+    ```
 
-          proxy_set_header Authorization "Bearer $access_token";
-          proxy_pass http://my_backend_app;
-          access_log /var/log/nginx/access.log oidc_jwt;
-      }
-  ```
+    > Note: Most of IDP supports JWT format access token although it is not mandatory. So, we validate it using `auth_jwt`.
 
 - **Logout** to click 'Sign out' button:
 
