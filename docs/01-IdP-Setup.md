@@ -15,7 +15,7 @@ This section describes the Okta Workforce Identity SSO product. You will need ad
 
 ## Create a New Okta Web Application
 
-1. Log in to Okta at [okta.com](okta.com).
+1. Log in to Okta at [okta.com](https://www.okta.com/).
 
 2. Select the **Admin** button next to your username to access the Admin console.
 
