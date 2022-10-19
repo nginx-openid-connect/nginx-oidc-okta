@@ -1,4 +1,4 @@
-# How To Set Up NGINX ACM/DevPortal OIDC for Okta Integration
+# NGINX ACM/DevPortal OIDC Setup for Okta Integration
 
 Take the following steps to set up NGINX ACM/DevPortal OIDC and test it for Okta integration.
 
