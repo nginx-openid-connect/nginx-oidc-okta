@@ -5,12 +5,21 @@ LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
 # Define NGINX versions for NGINX Plus and NGINX Plus modules
 # Uncomment this block and the versioned nginxPackages in the main RUN
 # instruction to install a specific release
+
 # https://docs.nginx.com/nginx/releases/
-ENV NGINX_VERSION 25 
+ENV NGINX_VERSION 27
 # https://nginx.org/en/docs/njs/changes.html
-ENV NJS_VERSION   0.6.2
+ENV NJS_VERSION   0.7.7
 # https://plus-pkgs.nginx.com 1~bionic
 ENV PKG_RELEASE   1~bionic
+
+
+# # https://docs.nginx.com/nginx/releases/
+# ENV NGINX_VERSION 25 
+# # https://nginx.org/en/docs/njs/changes.html
+# ENV NJS_VERSION   0.6.2
+# # https://plus-pkgs.nginx.com 1~bionic
+# ENV PKG_RELEASE   1~bionic
 
 ## Install Nginx Plus
 
@@ -29,9 +38,9 @@ RUN set -x \
     && apt-get update && apt-get upgrade -y \
     && DEBIAN_FRONTEND=noninteractive apt-get -qq -y install --no-install-recommends apt-transport-https lsb-release ca-certificates wget dnsutils gnupg vim-tiny apt-utils jq \
     # Install NGINX Plus from repo (https://cs.nginx.com/repo_setup)
-    && wget http://nginx.org/keys/nginx_signing.key && apt-key add nginx_signing.key \
-    && printf "deb https://plus-pkgs.nginx.com/ubuntu `lsb_release -cs` nginx-plus\n" | tee /etc/apt/sources.list.d/nginx-plus.list \
-    && wget -P /etc/apt/apt.conf.d https://cs.nginx.com/static/files/90nginx \
+    && wget https://cs.nginx.com/static/keys/nginx_signing.key && apt-key add nginx_signing.key \
+    && printf "deb https://pkgs.nginx.com/plus/ubuntu `lsb_release -cs` nginx-plus\n" | tee /etc/apt/sources.list.d/nginx-plus.list \
+    && wget -P /etc/apt/apt.conf.d https://cs.nginx.com/static/files/90pkgs-nginx \
     && apt-get update \
     #
     ## Install the latest release of NGINX Plus and/or NGINX Plus modules
