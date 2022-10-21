@@ -208,6 +208,10 @@ Configure a Dev Portal by either referencing **NGINX Management Suite Docs** of 
   > }
   > ```
 
+- Delete an environment of `Dev Portal`:
+
+  > `DELETE https://{{ctrl_ip}}/api/acm/v1/infrastructure/workspaces/{{infraworkspacename}}/environments/{{environmentname}}`
+
 ## 3. Test Dev Portal OIDC with Okta
 
 - Open a web browser and access the Dev Portal's FQDN like `http://nginx.devportal.okta.test`.
