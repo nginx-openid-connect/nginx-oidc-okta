@@ -93,11 +93,6 @@ Make note of the following information (Client ID and Client secret). You will n
 
   ![](./img/okta-credentials-pkce.png)
 
-- [Create a new User Pool](#create-a-new-user-pool)
-- [Create a user](#create-a-user)
-- [Create a domain](#create-a-domain)
-- [Create or Edit a new Application](#create-or-edit-a-new-application)
-
 ## Manage Access to your Okta Application
 
 To change the users and groups that have access to your Okta Application:
