@@ -83,11 +83,11 @@ Configure a Dev Portal by either referencing **NGINX Management Suite Docs** of 
             {
               "action": {
                 "authFlowType": "AUTHCODE",
-                "jwksURI": "http://{{idpDomain}}/oauth2/default/v1/keys",
-                "tokenEndpoint": "http://{{idpDomain}}/oauth2/default/v1/token",
-                "userInfoEndpoint": "http://{{idpDomain}}/oauth2/default/v1/userinfo",
-                "authorizationEndpoint": "http://{{idpDomain}}/oauth2/default/v1/authorize",
-                "logOffEndpoint": "http://{{idpDomain}}/oauth2/default/v1/logout",
+                "jwksURI": "https://{{idpDomain}}/oauth2/default/v1/keys",
+                "tokenEndpoint": "https://{{idpDomain}}/oauth2/default/v1/token",
+                "userInfoEndpoint": "https://{{idpDomain}}/oauth2/default/v1/userinfo",
+                "authorizationEndpoint": "https://{{idpDomain}}/oauth2/default/v1/authorize",
+                "logOffEndpoint": "https://{{idpDomain}}/oauth2/default/v1/logout",
                 "logOutParams": [],
                 "TokenParams": [],
                 "uris": {
@@ -161,11 +161,11 @@ Configure a Dev Portal by either referencing **NGINX Management Suite Docs** of 
             {
               "action": {
                 "authFlowType": "AUTHCODE",
-                "jwksURI": "http://{{idpDomain}}/oauth2/default/v1/keys",
-                "tokenEndpoint": "http://{{idpDomain}}/oauth2/default/v1/token",
-                "userInfoEndpoint": "http://{{idpDomain}}/oauth2/default/v1/userinfo",
-                "authorizationEndpoint": "http://{{idpDomain}}/oauth2/default/v1/authorize",
-                "logOffEndpoint": "http://{{idpDomain}}/oauth2/default/v1/logout",
+                "jwksURI": "https://{{idpDomain}}/oauth2/default/v1/keys",
+                "tokenEndpoint": "https://{{idpDomain}}/oauth2/default/v1/token",
+                "userInfoEndpoint": "https://{{idpDomain}}/oauth2/default/v1/userinfo",
+                "authorizationEndpoint": "https://{{idpDomain}}/oauth2/default/v1/authorize",
+                "logOffEndpoint": "https://{{idpDomain}}/oauth2/default/v1/logout",
                 "logOutParams": [],
                 "TokenParams": [],
                 "uris": {
