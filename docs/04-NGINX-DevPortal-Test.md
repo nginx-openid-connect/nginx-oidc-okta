@@ -216,7 +216,7 @@ Configure a Dev Portal by either referencing **NGINX Management Suite Docs** of 
 
 - Open a web browser and access the Dev Portal's FQDN like `http://nginx.devportal.okta.test`.
  ![](./img/okta-devportal-logged-out.png)
- ![](./img/okta-devportal-signin.png)
+ ![](./img/login-okta.png)
 - Try `Login` and `Logout`.
  ![](./img/okta-devportal-logged-in.png)
  ![](./img/okta-devportal-logged-out.png)
