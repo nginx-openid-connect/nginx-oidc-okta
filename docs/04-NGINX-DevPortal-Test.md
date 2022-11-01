@@ -215,5 +215,9 @@ Configure a Dev Portal by either referencing **NGINX Management Suite Docs** of 
 ## 3. Test Dev Portal OIDC with Okta
 
 - Open a web browser and access the Dev Portal's FQDN like `http://nginx.devportal.okta.test`.
+ ![](./img/okta-devportal-logged-out.png)
+ ![](./img/login-okta.png)
 - Try `Login` and `Logout`.
+ ![](./img/okta-devportal-logged-in.png)
+ ![](./img/okta-devportal-logged-out.png)
 - Test the above TWO steps after changing IdP (PKCE option) and updating Dev Portal via NGINX ACM API.
